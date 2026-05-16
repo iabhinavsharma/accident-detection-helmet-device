@@ -19,6 +19,9 @@ When the helmet detects a sudden impact or abnormal motion (indicating an accide
 | NEO-6M GPS Module | Tracks location at time of accident |
 | Buzzer | Audio alert on accident detection |
 | Push Button | Cancel alert within 10-second window |
+| 3x 650mAh LiPo Batteries (in parallel) | Portable power supply for the entire system |
+| TP4056 Charging Module | Safe charging and protection circuit for LiPo batteries |
+| Voltage Divider Circuit | Steps down voltage to safe levels for ESP32 and sensors |
 
 ---
 
@@ -32,11 +35,19 @@ When the helmet detects a sudden impact or abnormal motion (indicating an accide
 6. Accident event data (impact detected, GPS coordinates) is transmitted to a paired mobile phone via **Bluetooth (ESP32 built-in)**
 7. The system then resets and resumes monitoring
 
+The device is powered by **3x 650mAh LiPo batteries** connected in parallel for extended runtime. A **TP4056 module** handles safe charging with overcharge/over-discharge protection. A **voltage divider** is used to step down voltage to safe levels for the ESP32 and connected modules.
+
+---
+
+## 📸 Hardware
+
+![Accident Detection Helmet Circuit](rivo_project.jpeg)
+
 ---
 
 ## ⚠️ Known Limitations
 
-- **Threshold values for accident detection are not yet calibrated.** The current MPU6050 sensitivity thresholds (acceleration/gyroscope limits used to flag an impact) are placeholder values and may result in false positives or missed detections. Proper calibration based on real-world impact testing is needed before deployment.
+- **Threshold values for accident detection are not yet calibrated.** The current MPU6050 sensitivity thresholds are placeholder values and may result in false positives or missed detections. Proper calibration based on real-world impact testing is needed before deployment.
 
 ---
 
@@ -44,6 +55,7 @@ When the helmet detects a sudden impact or abnormal motion (indicating an accide
 
 - **Arduino IDE**
 - **ESP32 Dev Board**
+- C++ (Arduino framework)
 
 ---
 
@@ -62,10 +74,10 @@ When the helmet detects a sudden impact or abnormal motion (indicating an accide
 
 ## 📌 Future Improvements
 
-- Calibrate MPU6050 thresholds through real-world impact testing for reliable detection.
-- Send SMS alert with GPS coordinates via Mobile app.
-- Mobile app integration.
-- Cloud dashboard for fleet/workplace safety monitoring.
+- Calibrate MPU6050 thresholds through real-world impact testing for reliable detection
+- Send SMS alert with GPS coordinates via GSM module
+- Mobile app integration for real-time tracking
+- Cloud dashboard for fleet/workplace safety monitoring
 
 ---
 
@@ -73,4 +85,3 @@ When the helmet detects a sudden impact or abnormal motion (indicating an accide
 
 **Abhinav Sharma** — 1st Year ECE Student  
 [GitHub Profile](https://github.com/iabhinavsharma)
-
