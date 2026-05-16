@@ -1,16 +1,16 @@
-# 🪖 Accident Detection Helmet
+#  Accident Detection Helmet
 
 A smart helmet device that detects accidents in real-time using motion sensors and triggers an alert system with a manual cancel option.
 
 ---
 
-## 🔍 What It Does
+##  What It Does
 
 When the helmet detects a sudden impact or abnormal motion (indicating an accident), it activates a buzzer alert for 10 seconds. The wearer or a bystander can press a button to cancel the alert within that window — if no one cancels, it signals that help may be needed. Accident data is also transmitted wirelessly to a paired mobile phone via Bluetooth.
 
 ---
 
-## 🔧 Components Used
+##  Components Used
 
 | Component | Purpose |
 |---|---|
@@ -25,7 +25,7 @@ When the helmet detects a sudden impact or abnormal motion (indicating an accide
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 1. The **MPU6050** continuously monitors acceleration and gyroscope data
 2. If a sudden impact or abnormal tilt is detected beyond a threshold, an accident is flagged
@@ -39,19 +39,19 @@ The device is powered by **3x 650mAh LiPo batteries** connected in parallel for 
 
 ---
 
-## 📸 Hardware
+##  Hardware
 
 ![Accident Detection Helmet Circuit](rivo_project.jpeg)
 
 ---
 
-## ⚠️ Known Limitations
+##  Known Limitations
 
 - **Threshold values for accident detection are not yet calibrated.** The current MPU6050 sensitivity thresholds are placeholder values and may result in false positives or missed detections. Proper calibration based on real-world impact testing is needed before deployment.
 
 ---
 
-## 🛠️ Built With
+##  Built With
 
 - **Arduino IDE**
 - **ESP32 Dev Board**
@@ -59,7 +59,7 @@ The device is powered by **3x 650mAh LiPo batteries** connected in parallel for 
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 1. Clone this repository
 2. Open the `.ino` file in Arduino IDE
@@ -72,16 +72,15 @@ The device is powered by **3x 650mAh LiPo batteries** connected in parallel for 
 
 ---
 
-## 📌 Future Improvements
+##  Future Improvements
 
 - Calibrate MPU6050 thresholds through real-world impact testing for reliable detection
-- Send SMS alert with GPS coordinates via GSM module
 - Mobile app integration for real-time tracking
 - Cloud dashboard for fleet/workplace safety monitoring
 
 ---
 
-## 👤 Author
+##  Author
 
 **Abhinav Sharma** — 1st Year ECE Student  
 [GitHub Profile](https://github.com/iabhinavsharma)
